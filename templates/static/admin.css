@@ -1,0 +1,149 @@
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #020617;
+    color: #e2e8f0;
+}
+
+/* ================= CONTAINER ================= */
+.admin-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.admin-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #a855f7;
+}
+
+/* ================= SECTION ================= */
+.admin-section {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(10px);
+}
+
+.admin-section h2 {
+    margin-bottom: 20px;
+    color: #a855f7;
+}
+
+.admin-section h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #94a3b8;
+}
+
+/* ================= FORM GRID ================= */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+/* ================= INPUT ================= */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    background: #020617;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
+}
+
+/* ================= LABEL ================= */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* ================= BUTTON ================= */
+.primary-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+}
+
+/* ================= LIST ================= */
+.list-container {
+    margin-top: 15px;
+}
+
+/* ================= CARD (LIST ITEMS) ================= */
+.list-item {
+    background: rgba(255,255,255,0.05);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 3px solid #a855f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ================= DELETE BUTTON ================= */
+.delete-btn {
+    background: #ef4444;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+/* ================= FILE INPUT ================= */
+input[type="file"] {
+    background: transparent;
+    border: none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+}

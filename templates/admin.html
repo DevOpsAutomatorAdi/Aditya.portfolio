@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <!-- <link rel="stylesheet" href="admin.css"> -->
+<link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+</head>
+<body>
+
+<div class="admin-container">
+
+    <h1>⚙️ Admin Dashboard</h1>
+
+    <!-- ================= PROJECT ================= -->
+    <section class="admin-section">
+        <h2>📦 Project Management</h2>
+
+        <div class="form-grid">
+            <div>
+                <label>Project Title</label>
+                <input id="p_title">
+            </div>
+
+            <div>
+                <label>Project Link</label>
+                <input id="p_link">
+            </div>
+
+            <div>
+                <label>Documentation Link</label>
+                <input id="p_doc">
+            </div>
+
+            <div class="full-width">
+                <label>Description</label>
+                <textarea id="p_desc"></textarea>
+            </div>
+
+            <div class="full-width">
+                <label>Upload Images</label>
+                <input type="file" id="p_images" multiple>
+            </div>
+        </div>
+
+        <button id="project_btn" class="primary-btn" onclick="addProject()">➕ Add Project</button>
+
+        <h3>All Projects</h3>
+        <div id="projectList" class="list-container"></div>
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="admin-section">
+        <h2>🎓 Education Management</h2>
+
+        <div class="form-grid">
+            <div>
+                <label>College Name</label>
+                <input id="college">
+            </div>
+
+            <div>
+                <label>Degree</label>
+                <input id="degree">
+            </div>
+
+            <div>
+                <label>Branch</label>
+                <input id="branch">
+            </div>
+
+            <div>
+                <label>Duration</label>
+                <input id="edu_duration">
+            </div>
+
+            <div class="full-width">
+                <label>Upload Logo</label>
+                <input type="file" id="edu_logo">
+            </div>
+        </div>
+
+        <button id="edu_btn" class="primary-btn" onclick="addEducation()">➕ Add Education</button>
+
+        <h3>All Education</h3>
+        <div id="educationList" class="list-container"></div>
+    </section>
+
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="admin-section">
+        <h2>💼 Experience Management</h2>
+
+        <div class="form-grid">
+            <div>
+                <label>Role</label>
+                <input id="role">
+            </div>
+
+            <div>
+                <label>Company</label>
+                <input id="company">
+            </div>
+
+            <div class="full-width">
+                <label>Company Logo</label>
+                <input type="file" id="exp_logo">
+            </div>
+
+            <div>
+                <label>Job Type</label>
+                <select id="job_type">
+                    <option>Full-time</option>
+                    <option>Part-time</option>
+                    <option>Internship</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Work Mode</label>
+                <select id="work_mode">
+                    <option>Remote</option>
+                    <option>Hybrid</option>
+                    <option>Onsite</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Duration</label>
+                <input id="exp_duration">
+            </div>
+
+            <div class="full-width">
+                <label>Description</label>
+                <textarea id="exp_desc"></textarea>
+            </div>
+        </div>
+
+        <button id="exp_btn" class="primary-btn" onclick="addExperience()">➕ Add Experience</button>
+
+        <h3>All Experience</h3>
+        <div id="experienceList" class="list-container"></div>
+    </section>
+
+
+    <!-- ================= CERTIFICATIONS ================= -->
+    <section class="admin-section">
+        <h2>📜 Certification Management</h2>
+
+        <div class="form-grid">
+
+            <div class="full-width">
+                <label>Certification Name</label>
+                <input id="cert_name" placeholder="AWS Cloud Practitioner">
+            </div>
+
+            <div>
+                <label>Issuing Organization</label>
+                <input id="cert_org" placeholder="Amazon Web Services">
+            </div>
+
+            <div class="full-width">
+                <label>Upload Logo</label>
+                <input type="file" id="cert_logo">
+            </div>
+
+            <div>
+                <label>Issue Month</label>
+                <input id="issue_month" placeholder="January">
+            </div>
+
+            <div>
+                <label>Issue Year</label>
+                <input id="issue_year" placeholder="2024">
+            </div>
+
+            <div>
+                <label>Expiry Month</label>
+                <input id="expiry_month" placeholder="Optional">
+            </div>
+
+            <div>
+                <label>Expiry Year</label>
+                <input id="expiry_year" placeholder="Optional">
+            </div>
+
+            <div>
+                <label>Credential ID</label>
+                <input id="credential_id">
+            </div>
+
+            <div>
+                <label>Credential URL</label>
+                <input id="credential_url">
+            </div>
+
+        </div>
+
+        <button id="cert_btn" class="primary-btn" onclick="addCertification()">➕ Add Certification</button>
+
+        <h3>All Certifications</h3>
+        <div id="certList" class="list-container"></div>
+    </section>
+
+</div>
+
+<!-- <script src="admin.js"></script> -->
+
+<script src="{{ url_for('static', filename='admin.js') }}"></script>
+</body>
+</html>
